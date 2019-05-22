@@ -1,19 +1,11 @@
 require("dotenv").config();
-
-// Import the node-spotify-api NPM package.
 var Spotify = require("node-spotify-api");
-
-// Import the API keys
 var keys = require("./keys.js");
-
-// Import the request npm package.
 var request = require("request");
-
-// Import the FS package for read/write.
 var fs = require("fs");
 
 // Initialize the spotify API client using our client id and secret
-var spotify = new Spotify(keys.spotify);
+// var spotify = new Spotify(keys.spotify);
 
 var spotify = new Spotify({
     id: "26f21284decf485193f7654f6fe63447",
@@ -25,7 +17,7 @@ var spotify = new Spotify({
       return console.log('Error occurred: ' + err);
     }
    
-  console.log(data); 
+//   console.log(data); 
   });
 
 // var SPOTIFY_ID = "26f21284decf485193f7654f6fe63447"
@@ -98,7 +90,7 @@ var getMeMovie = function(movieName) {
 // Function for running a command based on text file
 var doWhatItSays = function() {
   fs.readFile("random.txt", "utf8", function(error, data) {
-    console.log(data);
+    // console.log(data);
 
     var dataArr = data.split(",");
 
